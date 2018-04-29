@@ -12,7 +12,7 @@
 docker build -f Dockerfile.build -t flask-build:latest .
 docker run -p 5000:5000 --entrypoint python flask-build:latest test_flask.py
 if [ $? == 0 ];then
-    docker build -f Dockerfile.web -t flask-build:latest .
+    docker build -f Dockerfile.web -t flask-web:latest .
 else
     echo "test failed"
 fi
