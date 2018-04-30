@@ -1,6 +1,0 @@
-# load default image
-FROM flask-build:latest
-
-# run flask
-ENTRYPOINT ["python"]
-CMD ["app.py"]
