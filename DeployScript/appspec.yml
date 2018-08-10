@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+hooks:
+  ApplicationStop:
+    - location: ApplicationStop.sh
+      timeout: 30  
+  BeforeInstall:
+    - location: BeforeInstall.sh
+      timeout: 300 
+  ApplicationStart:
+    - location: ApplicationStart.sh
+      timeout: 80
+  ValidateService:
+    - location: ValidateService.sh
+      timeout: 30
